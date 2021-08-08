@@ -5,7 +5,7 @@ import com.test.organization.entity.enums.DepartmentType;
 import com.test.organization.exception.BadRequestException;
 import com.test.organization.repository.DepartmentRepository;
 import com.test.organization.repository.MemberDepartmentRepository;
-import lombok.Getter;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -47,7 +47,7 @@ public class DepartmentController {
         return departmentRepository.save(department).getId();
     }
 
-    @Getter
+    @Data
     public static class InsertDepartmentRequestBody {
         private Long parentId;
         private DepartmentType type;
@@ -79,7 +79,7 @@ public class DepartmentController {
         return deptId;
     }
 
-    @Getter
+    @Data
     public static class UpdateDepartmentRequestBody {
         private String name;
         private String code;

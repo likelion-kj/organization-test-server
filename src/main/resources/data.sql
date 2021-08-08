@@ -28,7 +28,7 @@ CREATE TABLE member_department (
 
 ALTER TABLE member_department ADD UNIQUE KEY (member_id, department_id);
 
-INSERT INTO department (depth, parent_id, parent_ids, type, name, code) VALUES  (1, null, '', 'COMPANY', 'ABC회사', null);
+INSERT INTO department (depth, parent_id, parent_ids, type, name, code) VALUES  (0, null, '', 'COMPANY', 'ABC회사', null);
 INSERT INTO department (depth, parent_id, parent_ids, type, name, code) VALUES  (1, 1, '1', 'DIVISION', '경영지원본부', 'D100');
 INSERT INTO department (depth, parent_id, parent_ids, type, name, code) VALUES  (1, 1, '1', 'DIVISION', 'SW 개발본부', 'D200');
 INSERT INTO department (depth, parent_id, parent_ids, type, name, code) VALUES  (2, 2, '1,2', 'DEPARTMENT', '인사팀', 'D110');
