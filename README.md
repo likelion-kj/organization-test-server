@@ -17,7 +17,25 @@
 |컬럼명|유형(type)|비고|
 |------|---|---|
 |id |bigint |auto_increment|
-|organization_id |bigint | |
+|organization_id |bigint | - |
+|name|Varchar(200)|-|
+|code|Varchar(200)|-|
+
+* 테이블명: department1
+
+|컬럼명|유형(type)|비고|
+|------|---|---|
+|id |bigint |auto_increment|
+|division_id |bigint | - |
+|name|Varchar(200)|-|
+|code|Varchar(200)|-|
+
+* 테이블명: department2
+
+|컬럼명|유형(type)|비고|
+|------|---|---|
+|id |bigint |auto_increment|
+|department1_id |bigint | - |
 |name|Varchar(200)|-|
 |code|Varchar(200)|-|
 
