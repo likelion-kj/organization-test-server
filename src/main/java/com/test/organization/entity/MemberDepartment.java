@@ -11,7 +11,7 @@ import javax.persistence.*;
 public class MemberDepartment {
     @Id
     @Column(name = "seq", unique = true)
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long seq;
 
     @ManyToOne

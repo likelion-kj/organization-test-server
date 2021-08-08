@@ -12,11 +12,11 @@ public class Department {
 
     @Id
     @Column(name = "id", unique = true)
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "depth")
-    private Long depth;
+    private Integer depth;
 
     @Column(name = "parent_id")
     private Long parentId;
@@ -31,7 +31,7 @@ public class Department {
     @Column(name = "name")
     private String name;
     
-    @Column(name = "code")
+    @Column(name = "code", unique = true)
     private String code;
 
 }

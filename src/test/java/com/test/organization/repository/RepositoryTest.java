@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 
+import javax.transaction.Transactional;
+
 @Sql("/data.sql")
 @SpringBootTest
 public class RepositoryTest {
@@ -25,9 +27,17 @@ public class RepositoryTest {
     public void checkBaseData() throws JsonProcessingException {
         System.out.println(objectMapper.writeValueAsString(departmentRepository.findById(1L).get()));
         System.out.println(objectMapper.writeValueAsString(memberRepository.findById(1L).get()));
-        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.findAllByDepartmentId(0L)));
+        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.findByDepartment_Id(4L)));
         System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.findById(1L).get()));
+        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.findByDepartment_Id(11L)));
+        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.deleteByDepartment_Id(11L)));
+        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.findByDepartment_Id(11L)));
+        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.count()));
 
+        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.findByMember_Id(11L)));
+        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.deleteByMember_Id(11L)));
+        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.findByMember_Id(11L)));
+        System.out.println(objectMapper.writeValueAsString(memberDepartmentRepository.count()));
     }
 
 }
