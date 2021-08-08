@@ -95,9 +95,9 @@ public class DepartmentController {
         if (departmentRepository.existsByParentId(department.getId())) {
             throw new BadRequestException("하위 부서를 가지고 있으면 삭제를 할 수 없습니다.");
         }
-        Long deletedMemberCount = memberDepartmentRepository.deleteByDepartment_Id(department.getId());
+        memberDepartmentRepository.deleteByDepartment_Id(department.getId());
         departmentRepository.delete(department);
-        return deletedMemberCount;
+        return deptId;
     }
 
     private boolean isEmpty(String s) {
