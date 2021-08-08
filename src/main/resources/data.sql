@@ -1,9 +1,9 @@
-DROP TABLE IF EXISTS company;
-DROP TABLE IF EXISTS division;
-DROP TABLE IF EXISTS department1;
-DROP TABLE IF EXISTS department2;
-DROP TABLE IF EXISTS member;
 DROP TABLE IF EXISTS member_organization;
+DROP TABLE IF EXISTS member;
+DROP TABLE IF EXISTS department2;
+DROP TABLE IF EXISTS department1;
+DROP TABLE IF EXISTS division;
+DROP TABLE IF EXISTS company;
 
 CREATE TABLE company (
   id BIGINT auto_increment PRIMARY KEY,
