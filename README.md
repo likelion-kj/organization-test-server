@@ -38,3 +38,11 @@
 * 에러 케이스별 핸들링(https://www.baeldung.com/exception-handling-for-rest-with-spring)
 
 ## 빌드 및 실행방법
+unix 계열 기준으로 프로젝트 폴더에서 아래 명령어 치면 서버 실행
+```
+./mvnw spring-boot:run
+```
+만약 `mvnw` 파일에 실행 권한이 없다면 아래 명령어로 실행권한 줘야한다.
+```
+chmod 775 ./mvnw` 또는 `chmod 777 ./mvnw
+```
